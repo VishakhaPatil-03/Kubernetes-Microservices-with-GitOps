@@ -33,36 +33,11 @@ The system follows **GitOps principles**, ensuring automated, scalable, and self
 ---
 
 ## 🏗️ Architecture Diagram
+<div align="center">
+<img src="Architecture Diagram/architecture.svg" width="1000"/>
+</div>
 
-```mermaid
-flowchart TD
-    Dev[👨‍💻 Developer] -->|git push| GitHub[🐙 GitHub Repository]
-
-    GitHub -->|Webhook Trigger| Jenkins[🔧 Jenkins CI/CD]
-    Jenkins -->|Build Image| Docker[🐳 Docker Build]
-    Docker -->|Push Image| DockerHub[📦 DockerHub]
-
-    GitHub -->|K8s Manifests| ArgoCD[🔄 ArgoCD GitOps]
-    ArgoCD -->|Auto Sync| EKS[☸️ AWS EKS Cluster]
-
-    EKS --> Deployment[📦 Kubernetes Deployment]
-    Deployment --> Service[🌐 Service]
-    Service --> Ingress[🚦 NGINX Ingress]
-    Ingress --> Users[🌍 End Users]
-
-    EKS --> Prometheus[📊 Prometheus]
-    Prometheus --> Grafana[📈 Grafana Dashboard]
-
-    style Dev fill:#e3f2fd
-    style GitHub fill:#f3e5f5
-    style Jenkins fill:#ffebee
-    style Docker fill:#fff3e0
-    style DockerHub fill:#fff3e0
-    style ArgoCD fill:#e8f5e9
-    style EKS fill:#f1f8e9
-    style Prometheus fill:#fbe9e7
-    style Grafana fill:#ede7f6
-```
+---
 
 ### ☸️ AWS EKS Cluster Overview
 
