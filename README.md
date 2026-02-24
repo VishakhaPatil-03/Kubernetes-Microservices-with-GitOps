@@ -1,50 +1,152 @@
-# 🚀 Deployment of Microservices Application using Ingress Controller
+🚀 Kubernetes Microservices with GitOps
+End-to-End DevOps Implementation on AWS EKS
+<p align="center"> <img src="https://img.shields.io/badge/AWS-EKS-orange?style=for-the-badge&logo=amazonaws"> <img src="https://img.shields.io/badge/Kubernetes-Orchestration-blue?style=for-the-badge&logo=kubernetes"> <img src="https://img.shields.io/badge/Docker-Containerization-blue?style=for-the-badge&logo=docker"> <img src="https://img.shields.io/badge/Jenkins-CI%2FCD-red?style=for-the-badge&logo=jenkins"> <img src="https://img.shields.io/badge/ArgoCD-GitOps-orange?style=for-the-badge&logo=argo"> <img src="https://img.shields.io/badge/Helm-Package%20Manager-0F1689?style=for-the-badge&logo=helm"> <img src="https://img.shields.io/badge/Prometheus-Monitoring-E6522C?style=for-the-badge&logo=prometheus"> <img src="https://img.shields.io/badge/Grafana-Visualization-F46800?style=for-the-badge&logo=grafana"> </p>
+📌 Project Overview
 
-### by Kastro Kiran V
+This project demonstrates a Production-Grade Microservices Deployment Pipeline using modern DevOps practices.
 
-![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+It covers the complete workflow from:
 
-## 🎓 Join Our Jenkins+Docker+Kubernetes+Terraform Training Program!
+💻 Local Development → 📦 Docker → 🔁 CI/CD → ☸️ Kubernetes → 🌐 Ingress → 📊 Monitoring → 🔄 GitOps Automation
 
-**Batch 06**  
-**Jenkins | Docker | Kubernetes | Terraform on AWS**
+The application is deployed on AWS EKS, monitored using Prometheus & Grafana, and managed using ArgoCD (GitOps model).
 
-📅 **From August 07** | 🕒 8 Weeks Intensive Training | 👨‍💻 Hands-on Projects
+🏗️ Architecture Flow
+Developer
+   ↓
+GitHub Repository
+   ↓
+Jenkins CI/CD Pipeline
+   ↓
+Docker Image Build & Push
+   ↓
+AWS EKS Cluster
+   ↓
+Kubernetes Deployment + Ingress
+   ↓
+Users Access Application
+   ↓
+Prometheus → Grafana (Monitoring)
+   ↓
+ArgoCD (GitOps Continuous Deployment)
 
-✨ **What You'll Learn:**
-- ✅ End-to-end CI/CD pipeline implementation
-- ✅ Containerization with Docker
-- ✅ Kubernetes orchestration on AWS EKS
-- ✅ Infrastructure as Code with Terraform
-- ✅ Monitoring with Prometheus & Grafana
-- ✅ GitOps with ArgoCD
 
-🔹 **10+ Real-time Projects**  
-🔹 **One-One Mock Interviews**  
-🔹 **Resume Guidance**
+🛠️ Tech Stack
+🔹 Category	        🚀 Tools Used
+☁️ Cloud	            AWS EC2, AWS EKS
+🔁 CI/CD	            Jenkins
+🐳 Containerization	    Docker
+☸️ Orchestration	    Kubernetes
+🔄 GitOps	            ArgoCD
+📦 Package Manager	    Helm
+📊 Monitoring	        Prometheus
+📈 Visualization	    Grafana
+🌐 Networking	        NGINX Ingress Controller
 
-📌 **Register Now:**  
-[![Register Button](https://img.shields.io/badge/REGISTER_NOW-%23007EC6.svg?style=for-the-badge&logo=google-forms&logoColor=white)](https://forms.gle/rr7CKbG7Wu4Zdoit7)
 
----
+🚀 Key Features
 
-## 🛠️ Project Overview
+✔️ Automated CI/CD Pipeline
+✔️ Docker Image Versioning
+✔️ Path-Based Routing with Ingress
+✔️ GitOps Continuous Deployment
+✔️ Real-Time Cluster Monitoring
+✔️ Production-Level Troubleshooting Setup
+✔️ Load Balancer Exposure
 
-This project demonstrates a production-grade deployment of a multi-page web application on **AWS EKS** with **Ingress Controller** using a complete **Jenkins CI/CD** pipeline.
+🔁 CI/CD Pipeline Workflow
 
-## 🔧 Tools Used
+Code pushed to GitHub
 
-| Category        | Tools                                                                                      |
-|-----------------|-------------------------------------------------------------------------------------------|
-| Version Control | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white) |
-| CI/CD           | ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=flat&logo=jenkins&logoColor=white) |
-| Containers      | ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) |
-| Orchestration   | ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white) ![AWS EKS](https://img.shields.io/badge/AWS_EKS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white) |
-| Monitoring      | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=Prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=flat&logo=grafana&logoColor=white) |
-| GitOps          | ![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat&logo=argo&logoColor=white) |
+Jenkins triggers pipeline
 
-## 🌐 Project Video
-https://youtu.be/3fhvnsNY5fc
+Docker image build & push to DockerHub
+
+AWS EKS kubeconfig updated
+
+Kubernetes deployment updated
+
+Ingress configured
+
+Application URL generated
+
+Health check validation
+
+📊 Monitoring Setup
+🔹 Prometheus
+
+Scrapes metrics from:
+
+Kubernetes cluster
+
+Node Exporter
+
+Jenkins
+
+🔹 Grafana Dashboards
+
+Node Exporter Dashboard (ID: 1860)
+
+Jenkins Performance Dashboard (ID: 9964)
+
+🔄 GitOps with ArgoCD
+
+ArgoCD deployed using Helm
+
+Application linked to GitHub repository
+
+Automatic synchronization enabled
+
+Self-healing and auto-deployment supported
+
+📂 Repository Structure
+├── k8s/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── ingress.yaml
+│
+├── argocd/
+│   └── application.yaml
+│
+├── helm/
+│
+├── Dockerfile
+├── Jenkinsfile
+└── README.md
+🌐 Application Access
+
+After deployment:
+
+Home Page:     http://<LoadBalancer-URL>/
+About Page:    http://<LoadBalancer-URL>/about
+Services Page: http://<LoadBalancer-URL>/services
+Contact Page:  http://<LoadBalancer-URL>/contact
+🎯 Interview Highlights
+
+During interviews, this project demonstrates:
+
+Practical Kubernetes deployment knowledge
+
+Real-time CI/CD automation
+
+GitOps workflow understanding
+
+Cloud-native monitoring setup
+
+Production troubleshooting skills
+
+Infrastructure management using CLI tools
+
+🧠 Challenges Solved
+
+Image version conflicts
+
+Kubernetes rollout failures
+
+LoadBalancer pending state
+
+Prometheus target configuration
+
+Jenkins credential handling
+
+ArgoCD service exposure
