@@ -348,7 +348,7 @@ Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
 Prometheus Configuration:
 
 To configure Prometheus to scrape metrics from Node Exporter and Jenkins, you need to modify the prometheus.yml file. 
-The path of prometheus.yml is; cd /etc/prometheus/ ----> ls -l ----> You can see the "prometheus.yml" file ----> sudo vi prometheus.yml ----> You will see the content and also there is a default job called "Prometheus" Paste the below content at the end of the file;
+The path of prometheus.yml is; cd /etc/prometheus/ ----> ls -l ----> You can see the "promet heus.yml" file ----> sudo vi prometheus.yml ----> You will see the content and also there is a default job called "Prometheus" Paste the below content at the end of the file;
 
   - job_name: 'node_exporter'
     static_configs:
